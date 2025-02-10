@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzoo</title>
+    <link rel="stylesheet" href="InicioCSS.css">
+    <link rel="stylesheet" href="carocel.css">
+</head>
+<body>
+    <header>
+        <h1>Muzoo</h1>
+    </header>
+    <div class="navbar">
+        <div class="navbar-background">
+            <div class="navbar-buttons">
+                <a href="https://www.bambui.ifmg.edu.br/portal/" class="navbar-button">IFMG</a>
+                <a href="Inicio.html" class="navbar-button">Início</a>
+                <a href="galeria.html" class="navbar-button">Espécies</a>
+                <a href="mata-atlantica.html" class="navbar-button">Biomas</a>
+            </div>
+        </div>
+    </div>
+    <div class="faixa-texto_form">
+        <h1>Deixe seu Feedback sobre o site</h1>
+    </div>
+
+    <main>
+        <div class="content">
+            <form action="/submit-feedback" method="post"> 
+                <label for="nome">Nome:</label><br> 
+                <input type="text" id="nome" name="nome" required><br><br> 
+                <label for="email">Email:</label><br> 
+                <input type="email" id="email" name="email" required><br><br> 
+                <label for="avaliacao">Avaliação Geral sobre o site:</label><br> 
+                <select id="avaliacao" name="avaliacao" required>
+                    <option value="excelente">Excelente</option>
+                    <option value="bom">Bom</option>
+                    <option value="regular">Regular</option>
+                    <option value="ruim">Ruim</option>
+                </select><br><br>
+                <label for="necessidade">O site lhe atendeu as suas necessidades?</label><br> 
+                <select id="necessidade" name="necessidade" required>
+                    <option value="completamente">Completamente</option>
+                    <option value="vagamente">Atendeu Vagamente</option>
+                    <option value="nao">Não me atendeu</option>
+                    <option value="duvida">Esse site é mesmo de um museu?</option>
+                </select><br><br>
+                <label for="comentarios">Comentários:</label><br> 
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50" required></textarea><br><br> 
+                <input type="submit" value="Enviar Feedback">
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 - Projeto Muzoo</p>
+    </footer>
+
+    <!-- Carrossel Script -->
+    <script src="carousel.js"></script>
+</body>
+</html>

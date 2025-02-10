@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Répteis - Muzoo</title>
+    <link rel="stylesheet" href="InicioCSS.css"> <!-- Certifique-se de que o caminho do CSS está correto -->
+    <style>
+        .animal-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Espaçamento entre as imagens */
+            justify-content: center; /* Centraliza os botões */
+        }
+
+        .animal-image {
+            position: relative;
+            width: 150px; /* Largura fixa para as imagens */
+            height: 150px; /* Altura fixa para as imagens */
+            overflow: hidden; /* Para evitar que a imagem ultrapasse os limites */
+        }
+
+        .animal-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz com que a imagem preencha o espaço mantendo a proporção */
+            transition: transform 0.3s; /* Efeito de transição ao passar o mouse */
+        }
+
+        .animal-image:hover .animal-thumbnail {
+            transform: scale(1.05); /* Aumenta um pouco a imagem ao passar o mouse */
+        }
+
+        .animal-info-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+            color: white;
+            opacity: 0; /* Oculto por padrão */
+            transition: opacity 0.3s; /* Efeito de transição */
+        }
+
+        .animal-image:hover .animal-info-overlay {
+            opacity: 1; /* Exibe o overlay ao passar o mouse */
+        }
+
+        .scientific-name {
+            font-style: italic; /* Nome científico em itálico */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Muzoo</h1>
+    </header>
+    <div class="navbar">
+        <div class="navbar-background">
+            <div class="navbar-buttons">
+                <a href="https://www.bambui.ifmg.edu.br/portal/" class="navbar-button">IFMG</a>
+                <a href="Inicio.html" class="navbar-button">Início</a>
+                <a href="répteis.html" class="navbar-button">Espécies</a>
+                <a href="mata-atlantica.html" class="navbar-button">Biomas</a>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="content">
+            <h2>Selecione um Réptil</h2>
+            <div class="animal-buttons">
+                <a href="cobra.coral.html" class="animal-image">
+                    <img src="Imagens/coral.png" alt="Cobra Coral" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Cobra Coral</p>
+                        <p class="scientific-name"><i>Micrurus spp.</i></p>
+                    </div>
+                </a>
+                <a href="jacare.do.papo.amarelo.html" class="animal-image">
+                    <img src="Imagens/jacare.png" alt="Jacaré" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Jacaré</p>
+                        <p class="scientific-name"><i>Caiman yacare</i></p>
+                    </div>
+                </a>
+                <a href="teiu.comum.html" class="animal-image">
+                    <img src="Imagens/teiu.jpg" alt="Teiú" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Teiú</p>
+                        <p class="scientific-name"><i>Salvator merianae</i></p>
+                    </div>
+                </a>
+                <a href="urutu.html" class="animal-image">
+                    <img src="Imagens/urutu.png" alt="Urutu" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Urutu</p>
+                        <p class="scientific-name"><i>Bothrops alternatus</i></p>
+                    </div>
+                </a>
+            </div>
+            <h2>Selecione um Anfíbio</h2>
+            <div class="animal-buttons">
+                <a href="sapo.cururu.html" class="animal-image">
+                    <img src="Imagens/sapo-cururu.png" alt="Sapo Cururu" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Sapo Cururu</p>
+                        <p class="scientific-name"><i>Rhinella marina</i></p>
+                    </div>
+                </a>
+            </div>
+            <h2>Selecione uma Ave</h2>
+            <div class="animal-buttons">
+                <a href="acauã.html" class="animal-image">
+                    <img src="Imagens/acaua.png" alt="Acauã" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Acauã</p>
+                        <p class="scientific-name"><i>Herpetotheres cachinnans</i></p>
+                    </div>
+                </a>
+                <a href="beijaflortesoura.html" class="animal-image">
+                    <img src="Imagens/beijaflortesoura.png" alt="Beija-flor tesoura" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Beija-flor tesoura</p>
+                        <p class="scientific-name"><i>Campylopterus largipennis</i></p>
+                    </div>
+                </a>
+                <a href="bem.te.vi.html" class="animal-image">
+                    <img src="Imagens/Bem-te-vi.png" alt="Bem-te-vi" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Bem-te-vi</p>
+                        <p class="scientific-name"><i>Pitangus sulphuratus</i></p>
+                    </div>
+                </a>
+                <a href="Urubupreto.html" class="animal-image">
+                    <img src="Imagens/urubupreto.png" alt="Urubu Preto" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Urubu Preto</p>
+                        <p class="scientific-name"><i>Coragyps atratus</i></p>
+                    </div>
+                </a>
+                <!-- Adicionando os novos animais da lista -->
+                <a href="arara.caninde.html" class="animal-image">
+                    <img src="Imagens/arara_caninde.png" alt="Arara Canindé" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Arara Canindé</p>
+                        <p class="scientific-name"><i>Ara ararauna</i></p>
+                    </div>
+                </a>
+                <a href="biguá.html" class="animal-image">
+                    <img src="Imagens/bigua.png" alt="Biguá" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Biguá</p>
+                        <p class="scientific-name"><i>Phalacrocorax brasilianus</i></p>
+                    </div>
+                </a>
+                <a href="Canário-da-terra.html" class="animal-image">
+                    <img src="Imagens/canário-da-terra.png" alt="Canário-da-terra" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Canário-da-terra</p>
+                        <p class="scientific-name"><i>Sicalis flaveola</i></p>
+                    </div>
+                </a>
+                <a href="coleirinho.html" class="animal-image">
+                    <img src="Imagens/coleirinho.png" alt="Coleirinho" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Coleirinho</p>
+                        <p class="scientific-name"><i>Sporophila caerulescens</i></p>
+                    </div>
+                </a>
+                <a href="corrupião.html" class="animal-image">
+                    <img src="Imagens/corrupião.png" alt="Corrupião" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Corrupião</p>
+                        <p class="scientific-name"><i>Icterus jamacaii</i></p>
+                    </div>
+                </a>
+                <a href="Coruja-buraqueira.html" class="animal-image">
+                    <img src="Imagens/Coruja-buraqueira.png" alt="Coruja-buraqueira" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Coruja-buraqueira</p>
+                        <p class="scientific-name"><i>Athene cunicularia</i></p>
+                    </div>
+                </a>
+                <a href="curicaca.html" class="animal-image">
+                    <img src="Imagens/curicaca.png" alt="Curicaca" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Curicaca</p>
+                        <p class="scientific-name"><i>Theristicus caudatus</i></p>
+                    </div>
+                </a>
+                <a href="Garça-boiadeira.html" class="animal-image">
+                    <img src="Imagens/garca-vaqueira.png" alt="Garça-boiadeira" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Garça-boiadeira</p>
+                        <p class="scientific-name"><i>Bubulcus ibis</i></p>
+                    </div>
+                </a>
+                <a href="jacurutu.html" class="animal-image">
+                    <img src="Imagens/jacurutu.png" alt="Jacurutu" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Jacurutu</p>
+                        <p class="scientific-name"><i>Bubo virginianus</i></p>
+                    </div>
+                </a>
+                <a href="maritaca.html" class="animal-image">
+                    <img src="Imagens/maritaca.png" alt="Maritaca" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Maritaca</p>
+                        <p class="scientific-name"><i>Pionus maximiliani</i></p>
+                    </div>
+                </a>
+                <a href="Pintassilgo-da-venezuela.html" class="animal-image">
+                    <img src="Imagens/Pintassilgo-da-venezuela.png" alt="Pintassilgo-da-venezuela" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Pintassilgo-da-venezuela</p>
+                        <p class="scientific-name"><i>Spinus cucullatus</i></p>
+                    </div>
+                </a>
+                <a href="pombão.html" class="animal-image">
+                    <img src="Imagens/pombao.png" alt="Pombão" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Pombão</p>
+                        <p class="scientific-name"><i>Patagioenas picazuro</i></p>
+                    </div>
+                </a>
+                <a href="quiriquiri.html" class="animal-image">
+                    <img src="Imagens/quiriquiri.png" alt="Quiriquiri" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Quiriquiri</p>
+                        <p class="scientific-name"><i>Falco sparverius</i></p>
+                    </div>
+                </a>
+                <a href="rolinha.html" class="animal-image">
+                    <img src="Imagens/rolinha.png" alt="Rolinha" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Rolinha</p>
+                        <p class="scientific-name"><i>Columbina talpacoti</i></p>
+                    </div>
+                </a>
+                <a href="Sanhaço-cinzento.html" class="animal-image">
+                    <img src="Imagens/Sanhaco-cinzento.png" alt="Sanhaço-cinzento" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Sanhaço-cinzento</p>
+                        <p class="scientific-name"><i>Tangara sayaca</i></p>
+                    </div>
+                </a>
+                <a href="seriema.html" class="animal-image">
+                    <img src="Imagens/seriema.png" alt="Seriema" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Seriema</p>
+                        <p class="scientific-name"><i>Cariama cristata</i></p>
+                    </div>
+                </a>
+                <a href="suriri.html" class="animal-image">
+                    <img src="Imagens/suriri.png" alt="Suriri" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Suriri</p>
+                        <p class="scientific-name"><i>Tyrannus melancholicus</i></p>
+                    </div>
+                </a>
+                <a href="Tucano-açu.html" class="animal-image">
+                    <img src="Imagens/Tucano-açu.png" alt="Tucano-açu" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Tucano-açu</p>
+                        <p class="scientific-name"><i>Ramphastos toco</i></p>
+                    </div>
+                </a>
+            </div>
+            <h2>Selecione um Mamífero</h2>
+            <div class="animal-buttons">
+                <a href="jaguatirica.html" class="animal-image">
+                    <img src="Imagens/jaguatirica.jpg" alt="Jaguatirica" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Jaguatirica</p>
+                        <p class="scientific-name"><i>Leopardus pardalis</i></p>
+                    </div>
+                </a>
+                <a href="capivara.html" class="animal-image">
+                    <img src="Imagens/capivara.png" alt="Capivara" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Capivara</p>
+                        <p class="scientific-name"><i>Hydrochoerus hydrochaeris</i></p>
+                    </div>
+                </a>
+                <a href="quati.html" class="animal-image">
+                    <img src="Imagens/quati.png" alt="Quati" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Quati</p>
+                        <p class="scientific-name"><i>Nasua nasua</i></p>
+                    </div>
+                </a>
+                <a href="tamandua-bandeira.html" class="animal-image">
+                    <img src="Imagens/tamanduá-b.jpg" alt="Tamanduá-bandeira" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Tamanduá-bandeira</p>
+                        <p class="scientific-name"><i>Myrmecophaga tridactyla</i></p>
+                    </div>
+                </a>
+                <!-- Adicionando os novos animais da lista -->
+                <a href="Cachoro-Do-Mato.html" class="animal-image">
+                    <img src="Imagens/cachorro-do-mato.png" alt="Cachorro-do-mato" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Cachorro-do-mato</p>
+                        <p class="scientific-name"><i>Cerdocyon thous</i></p>
+                    </div>
+                </a>
+                <a href="camundongo.html" class="animal-image">
+                    <img src="Imagens/camundongo.png" alt="Camundongo" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Camundongo</p>
+                        <p class="scientific-name"><i>Mus musculus</i></p>
+                    </div>
+                </a>
+                <a href="cateto.html" class="animal-image">
+                    <img src="Imagens/cateto.png" alt="Cateto" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Cateto</p>
+                        <p class="scientific-name"><i>Pecari tajacu</i></p>
+                    </div>
+                </a>
+                <a href="Furão-Pequeno.html" class="animal-image">
+                    <img src="Imagens/furao-pequeno.png" alt="Furão-pequeno" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Furão-pequeno</p>
+                        <p class="scientific-name"><i>Galictis cuja</i></p>
+                    </div>
+                </a>
+                <a href="Gambá-de-orelha-pequena.html" class="animal-image">
+                    <img src="Imagens/gamba-de-orelha-branca.png" alt="Gambá-de-orelha-branca" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Gambá-de-orelha-branca</p>
+                        <p class="scientific-name"><i>Didelphis albiventris</i></p>
+                    </div>
+                </a>
+                <a href="irara.html" class="animal-image">
+                    <img src="Imagens/irara.png" alt="Irara" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Irara</p>
+                        <p class="scientific-name"><i>Eira barbara</i></p>
+                    </div>
+                </a>
+                <a href="jaratataca.html" class="animal-image">
+                    <img src="Imagens/jaratataca.png" alt="Jaratataca" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Jaratataca</p>
+                        <p class="scientific-name"><i>Conepatus semistriatus</i></p>
+                    </div>
+                </a>
+                <a href="lobo-guara.html" class="animal-image">
+                    <img src="Imagens/lobo-guara.png" alt="Lobo-guará" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Lobo-guará</p>
+                        <p class="scientific-name"><i>Chrysocyon brachyurus</i></p>
+                    </div>
+                </a>
+                <a href="lontra.html" class="animal-image">
+                    <img src="Imagens/lontra.png" alt="Lontra" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Lontra</p>
+                        <p class="scientific-name"><i>Lontra longicaudis</i></p>
+                    </div>
+                </a>
+                <a href="paca.html" class="animal-image">
+                    <img src="Imagens/paca.png" alt="Paca" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Paca</p>
+                        <p class="scientific-name"><i>Cuniculus paca</i></p>
+                    </div>
+                </a>
+                <a href="Porquinho-da-índia.html" class="animal-image">
+                    <img src="Imagens/porquinho-da-india.png" alt="Porquinho-da-índia" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Porquinho-da-índia</p>
+                        <p class="scientific-name"><i>Cavia porcellus</i></p>
+                    </div>
+                </a>
+                <a href="Sagui-de-tufos-pretos.html" class="animal-image">
+                    <img src="Imagens/Saqui-de-tufos-preto.jpg" alt="Sagui-de-tufos-pretos" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Sagui-de-tufos-pretos</p>
+                        <p class="scientific-name"><i>Callithrix penicillata</i></p>
+                    </div>
+                </a>
+                <a href="Tamanduá-mirim.html" class="animal-image">
+                    <img src="Imagens/Tamanduá-mirim.png" alt="Tamanduá-mirim" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Tamanduá-mirim</p>
+                        <p class="scientific-name"><i>Tamandua tetradactyla</i></p>
+                    </div>
+                </a>
+                <a href="Tatu galinha.html" class="animal-image">
+                    <img src="Imagens/tatu-galinha.png" alt="Tatu galinha" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Tatu galinha</p>
+                        <p class="scientific-name"><i>Dasypus novemcinctus</i></p>
+                    </div>
+                </a>
+                <a href="tatu-peba.html" class="animal-image">
+                    <img src="Imagens/tatu-peba.png" alt="Tatu peba" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Tatu peba</p>
+                        <p class="scientific-name"><i>Euphractus sexcinctus</i></p>
+                    </div>
+                </a>
+            </div> 
+            <h2>Selecione um Peixe</h2>
+            <div class="animal-buttons">
+                <a href="tilapia-do-nilo.html" class="animal-image">
+                    <img src="Imagens/tilapia.jpeg" alt="Tilápia do Nilo" class="animal-thumbnail">
+                    <div class="animal-info-overlay">
+                        <p class="animal-name">Tilápia do Nilo</p>
+                        <p class="scientific-name"><i>Oreochromis niloticus</i></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script> <!-- Inclua o script JavaScript se necessário -->
+</body>
+</html>

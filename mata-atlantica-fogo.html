@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssfogo.css"> <!-- Link para o seu CSS -->
+    <title>Biomas</title>
+</head>
+<body id="biomas">
+    <header>
+        <h1>Biomas do Brasil</h1>
+    </header>
+    <div class=".header">
+        <div class="navbar-background">
+            <div class="navbar-buttons">
+                <a href="https://www.bambui.ifmg.edu.br/portal/" class="navbar-button">IFMG</a>
+                <a href="Inicio.html" class="navbar-button">Início</a>
+                <a href="galeria.html" class="navbar-button">Espécies</a>
+                <a href="mata-atlantica.html" class="navbar-button">Biomas</a>
+            </div>
+        </div>
+    </div>
+    <!-- Seção do slideshow de imagens -->
+    <div class="image-slideshow">
+        <img id="image1" class="slideshow-image active" src="Imagens/chama1.png" alt="Imagem de biomas brasileiros">
+        <img id="image2" class="slideshow-image" src="Imagens/porce.png" alt="Imagem de biomas brasileiros">
+        <img id="image3" class="slideshow-image" src="Imagens/queimada.jpg" alt="Imagem de biomas brasileiros">
+        <img id="image3" class="slideshow-image" src="Imagens/queimadasproce.png" alt="Imagem de biomas brasileiros">
+    </div>
+
+    <div class="slideshow-buttons">
+        <button class="slideshow-button" id="prev-button">Anterior</button>
+        <button class="slideshow-button" id="next-button">Próximo</button>
+    </div>
+    <button class="fire-arrow" onclick="window.location.href='mata-atlantica.html';"></button>
+    <main>
+        <div class="animal-info">
+            <h2>Estado Atual dos Biomas Brasileiros</h2>
+            <p>
+                Os biomas brasileiros são ecossistemas de extrema importância ecológica, cobrindo diferentes regiões do país e abrigando uma biodiversidade única. No entanto, ao longo dos anos, esses biomas têm sofrido degradação devido a fatores como desmatamento, queimadas, expansão agrícola e urbanização. A perda de habitat impacta diretamente a fauna e a flora, colocando inúmeras espécies em risco de extinção.
+            </p>
+            <div class="profile-image-container">
+                <div class="profile-image-background">
+                    <img src="Imagens/queimadasproce.png" alt="Imagem aérea de biomas brasileiros">
+                    <p class="animal-name">Imagem aérea de biomas brasileiros</p>
+                </div>
+            </div>
+        
+            <h2>Importância Cultural e Ecológica</h2>
+            <p>
+                Cada bioma possui características únicas que influenciam diretamente o equilíbrio ambiental, os recursos naturais e as comunidades locais:
+            </p>
+            <ul>
+                <li><strong>Perda de Biodiversidade:</strong> Muitos biomas brasileiros abrigam espécies endêmicas que não são encontradas em nenhum outro lugar do mundo. A destruição desses habitats ameaça a sobrevivência de inúmeras plantas e animais.</li>
+                <li><strong>Impacto nas Comunidades Locais:</strong> Populações indígenas, ribeirinhas e tradicionais dependem diretamente dos biomas para sua subsistência, seja através da pesca, agricultura ou extrativismo sustentável. A degradação dos biomas afeta sua qualidade de vida e segurança alimentar.</li>
+                <li><strong>Desastres Naturais:</strong> O desmatamento e a degradação ambiental contribuem para eventos extremos, como enchentes e deslizamentos de terra, que colocam em risco comunidades e ecossistemas inteiros.</li>
+            </ul>
+            <div class="profile-image-container">
+                <div class="profile-image-background">
+                    <img src="Imagens/queimada2.jpg" alt="Imagem terrestre de biomas brasileiros">
+                    <p class="animal-name">Imagem terrestre de biomas brasileiros</p>
+                </div>
+            </div>
+        
+            <h2>Esforços de Conservação</h2>
+            <p>
+                Diversos esforços estão sendo feitos para preservar e restaurar os biomas brasileiros. Projetos de reflorestamento, criação de áreas protegidas e práticas sustentáveis são algumas das iniciativas para recuperar a biodiversidade e os serviços ecossistêmicos dessas regiões.
+            </p>
+            <p>
+                A conscientização sobre a importância dos biomas é essencial para mobilizar ações de conservação. Organizações governamentais e não governamentais têm desempenhado um papel fundamental na promoção da educação ambiental e na defesa desses ecossistemas,Como o SOS Mata Atlantica.
+            </p>
+            <div class="profile-image-container">
+                <div class="profile-image-background">
+                    <img src="Imagens/sos.png" alt="SOS mata atlantica">
+                    <p class="animal-name">SOS mata atlantica </p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Projeto Biomas do Brasil</p>
+    </footer>
+
+    <script>
+        // Script para controlar o slideshow de imagens
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.slideshow-image');
+        const totalImages = images.length;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+            showImage(currentImageIndex);
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+            showImage(currentImageIndex);
+        }
+
+        document.getElementById('next-button').addEventListener('click', nextImage);
+        document.getElementById('prev-button').addEventListener('click', prevImage);
+
+        showImage(currentImageIndex);
+    </script>
+</body>
+</html>
